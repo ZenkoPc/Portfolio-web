@@ -1,0 +1,51 @@
+---
+
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import '@fontsource/onest/400.css'
+
+interface Props {
+	title: string;
+	description: string
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="relative h-full">
+		<div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+		<Header />
+		<slot />
+		<Footer />
+	</body>
+</html>
+<style is:global>
+	:root {
+		color-scheme: light dark;
+	}
+	html {
+		background-color: #050505;
+		font-family: "Onest", "sans-serif";
+		scroll-behavior: smooth;
+	}
+	body{
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+	}
+	@media (prefers-reduced-motion: reduced){
+		html{
+			scroll-behavior: auto;
+		}
+	}
+</style>

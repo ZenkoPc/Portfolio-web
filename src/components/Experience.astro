@@ -1,0 +1,31 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+
+const experience = [
+    {
+        'title': 'Buscando chamba',
+        'description': 'Buscando chamba como frontend developer junior!',
+        'date': 'Actualmente'
+    },
+    {
+        'title': 'Frontend Developer intern',
+        'description': 
+            'Responsable de la revision de sitios en produccion como tester, validar los links y elementos de las paginas, desarrollar componentes con react y astro, estar al dia de las nuevas tecnologias y nuevas versiones, integrar APIs con el front y comprobar su funcionalidad',
+        'date': 'Julio 2023',
+        'link': 'https://www.google.com'
+    }
+]
+
+---
+
+<ol class="relative border-s border-gray-200 ml-2">                  
+    {
+        experience.map(exp => (
+            <ExperienceItem {...exp} />
+        ))
+    }
+</ol>
+
+
+

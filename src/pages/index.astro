@@ -1,0 +1,67 @@
+---
+import SectionContainer from "../components/SectionContainer.astro"
+import Proyects from "../components/Proyects.astro"
+import Layout from '../layouts/Layout.astro';
+import Badge from "../components/Badge.astro"
+import Button from "../components/Button.astro"
+import Github from "../icons/Github.astro"
+import Linkedin from "../icons/Linkedin.astro"
+import Mail from "../icons/Mail.astro"
+import Experience from "../components/Experience.astro"
+import Briefcase from "../icons/Briefcase.astro"
+import CodeIcon from "../icons/Code.astro"
+---
+
+<Layout title="Portfolio de Andres Obando -  Desarrollador y Programador frontend con +6 meses de experiencia" description='Contrata a Andres Obando como parte de tu equipo de desarrolladores frontend, desarrollador frontend junior, Enfocado en los requerimientos del cliente'>
+	<main class="px-5">
+		<SectionContainer id="top" class="pt-44 pb-24">
+			<h1 class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex  gap-x-5 justify pb-6 lg:pb-10 flex-row">
+				Hey, soy Andres
+				<a href="https://www.linkedin.com/in/andr%C3%A9s-obando-1738522a3/" target="_blank" rel="noopener" class="flex justify-center items-center gap-x-5 flex-row">
+					<Badge>Available for hire</Badge>
+				</a>
+			</h1>
+			<h2 class="text-xl md:text-2xl max-w-[700px] text-wrap opacity-80">
+				<span class="">
+					+6 meses de experiencia.	
+				</span> <span class="opacity-80 text-red-300/90">
+					Desarrollador frontend junior dedicado.	
+				</span> 
+				<span class="text-yellow-200/90">
+					De Bogota, Colombia,	
+				</span> <span class="opacity-85">
+					Enfocado a realizar aplicaciones enfocadas
+					a los requerimientos del cliente.
+				</span>
+			</h2>
+			<nav class="flex flex-wrap gap-y-3 gap-x-2 mt-16">
+				<Button link="https://github.com/ZenkoPc">
+					<Github class="size-4 md:size-6" />
+					Github
+				</Button>
+				<Button link="https://www.linkedin.com/in/andr%C3%A9s-obando-1738522a3/">
+					<Linkedin class="size-4 md:size-6" />
+					LinkedIn
+				</Button>
+				<Button link="mailto:pipeobandog@hotmail.com">
+					<Mail class="size-4 md:size-6" />
+					pipeobandog@hotmail.com
+				</Button>
+			</nav>
+		</SectionContainer>
+		<SectionContainer id="experiencia">
+			<h2 class="font-semibold text-3xl mb-6 flex gap-x-3 items-center">
+				<Briefcase class="size-7" />
+				Experiencia Laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+		<SectionContainer id="proyectos" class="">
+			<h2 class="font-semibold text-3xl mb-6 flex gap-x-3 items-center">
+				<CodeIcon class="size-7" />
+				Proyectos
+			</h2>
+			<Proyects />
+		</SectionContainer>
+	</main>
+</Layout>
