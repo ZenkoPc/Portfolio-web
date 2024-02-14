@@ -2,17 +2,65 @@
 
 import React from "../icons/React.astro"
 import Tailwind from "../icons/Tailwind.astro"
+import HTML from "../icons/HTML.astro"
+import CSS from "../icons/CSS.astro"
+import Typescript from "../icons/Typescript.astro"
+import Javascript from "../icons/Javascript.astro"
+import AstroIcon from "../icons/AstroIcon.astro"
+import Node from "../icons/Node.astro"
+import Mysql from "../icons/Mysql.astro"
+import Global from "../icons/Global.astro"
 
 const tags = {
     REACT: {
         name: 'React.js',
-        class: 'bg-black border text-white',
+        class: 'bg-[#0c0c0c] text-white shadow-[0px_0px_5px_-1px] shadow-white',
         icon: React
     },
     TAILWIND: {
         name: 'TailwindCSS',
-        class: 'bg-[#13283F] text-[#73bcf6]',
+        class: 'bg-[#13283F] text-[#73bcf6] shadow-[0px_0px_5px_-1px] shadow-[#73bcf6]',
         icon: Tailwind
+    },
+    HTML5: {
+        name: 'HTML 5',
+        class: 'bg-[#f3f3f3]/90 text-black shadow-[0px_0px_5px_1px] shadow-[#F64A1D]',
+        icon: HTML
+    },
+    CSS3:{
+        name: 'CSS 3',
+        class: 'bg-[#13283F] text-[#73bcf6] shadow-[0px_0px_5px_-1px] shadow-[#73bcf6]',
+        icon: CSS
+    },
+    JS: {
+        name: 'JavaScript',
+        class: 'bg-[#0c0c0c] text-[#ffec00] shadow-[0px_0px_5px_-1px] shadow-[#ffec00]',
+        icon: Javascript
+    },
+    ASTRO: {
+        name: 'Astro.js',
+        class: 'bg-[#23262f] text-[#fcfcfc] shadow-[0px_0px_5px_-1px] shadow-white',
+        icon: AstroIcon
+    },
+    I18N: {
+        name: 'i18n (internalizacion)',
+        class: 'bg-[#13283F] text-[#73bcf6] shadow-[0px_0px_5px_-1px] shadow-white',
+        icon: Global
+    },
+    NODE:{
+        name: 'NodeJS',
+        class: 'bg-[#090C15] text-[#00b341] shadow-[0px_0px_5px_-1px] shadow-[#00b341]',
+        icon: Node
+    },
+    MYSQL: {
+        name: 'MySQL',
+        class: 'bg-[#3E6E93] text-[#Fcfcfc]/90 shadow-[0px_0px_6px_-1px] shadow-[#F29221]',
+        icon: Mysql
+    },
+    TYPESCRIPT: {
+        name: 'Typescript',
+        class: 'bg-[#00abfb]/80 text-[#f3f3f3] shadow-[0px_0px_5px_-1px] shadow-white',
+        icon: Typescript
     }
 }
 
@@ -22,8 +70,16 @@ const proyects = [
         description: 'Un clon de spotify hecho con react, proximamente con react-query y react-router, en progreso: una copia con Astro!',
         link: '',
         github: '',
+        image: '/spotify.webp',
+        tags: [tags.REACT,tags.TAILWIND,tags.HTML5,tags.CSS3,tags.JS,tags.TYPESCRIPT]
+    },
+    {
+        title: 'Spotify Clon',
+        description: 'Un clon de spotify hecho con react, proximamente con react-query y react-router, en progreso: una copia con Astro!',
+        link: '',
+        github: '',
         image: '/proyect.webp',
-        tags: [tags.REACT,tags.TAILWIND]
+        tags: [tags.REACT,tags.TAILWIND,tags.HTML5,tags.CSS3,tags.JS,tags.TYPESCRIPT]
     }
 ]
 
@@ -31,7 +87,7 @@ const proyects = [
 
 {
     proyects.map(({ title, description, tags, image }) => (
-        <article>
+        <article class="mb-24">
             <h3 class="text-2xl font-semibold text-yellow-200 mb-2">
                 {title}    
             </h3>
