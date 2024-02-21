@@ -10,6 +10,7 @@ import AstroIcon from "../icons/AstroIcon.astro"
 import Node from "../icons/Node.astro"
 import Mysql from "../icons/Mysql.astro"
 import Global from "../icons/Global.astro"
+import IA from "../icons/IA.astro"
 
 const tags = {
     REACT: {
@@ -61,6 +62,11 @@ const tags = {
         name: 'Typescript',
         class: 'bg-[#00abfb]/80 text-[#f3f3f3] shadow-[0px_0px_5px_-1px] shadow-white',
         icon: Typescript
+    },
+    IA: {
+        name: 'API IA',
+        class: 'bg-[#0c0c0c]/80 text-[#6f32be] shadow-[0px_0px_5px_-1px] shadow-white',
+        icon: IA
     }
 }
 
@@ -74,12 +80,20 @@ const proyects = [
         tags: [tags.REACT,tags.TAILWIND,tags.HTML5,tags.CSS3,tags.JS,tags.TYPESCRIPT]
     },
     {
-        title: 'Spotify Clon',
-        description: 'Un clon de spotify hecho con react, proximamente con react-query y react-router, en progreso: una copia con Astro!',
+        title: 'Cohere tools',
+        description: 'Un corrector de texto y un traductor utilizando la IA que ofrece COHERE, mas functiones proximamente',
         link: '',
         github: '',
-        image: '/proyect.webp',
-        tags: [tags.REACT,tags.TAILWIND,tags.HTML5,tags.CSS3,tags.JS,tags.TYPESCRIPT]
+        image: '/cohere.webp',
+        tags: [tags.TAILWIND,tags.HTML5,tags.CSS3,tags.JS, tags.IA, tags.ASTRO]
+    },
+    {
+        title: 'PetAdmin Dashboard',
+        description: 'Un dashboard para una veterinaria, con roles de admin, editor y viewer, esta desarrollado con react, tailwind, axios, nodejs y Typescript, progreso: 50%',
+        link: '',
+        github: '',
+        image: '/cohere.webp',
+        tags: [tags.TAILWIND,tags.HTML5,tags.CSS3,tags.TYPESCRIPT, tags.NODE,tags.REACT]
     }
 ]
 
@@ -96,7 +110,7 @@ const proyects = [
             </p>
             <ul class="flex gap-2 flex-row flex-wrap my-4">
                 {tags.map(tag => (
-                    <li>
+                    <li class='transition duration-300 hover:scale-110 cursor-default'>
                         <span class={`${tag.class} flex gap-x-2 rounded-full text-sm items-center px-3 py-1`}>
                             <tag.icon class="size-7" />  
                             {tag.name}
